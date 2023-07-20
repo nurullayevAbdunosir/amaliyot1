@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+.container{
+    display: flex;
+    gap: 200px;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #505050;
+    
+}
+
+ul{
+    position: relative;
+    transform: skewY(-15deg);
+}
+ul li {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    background: #414247;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.9s;
+}
+
+ul li:hover{
+    background: rgb(247, 0, 0);
+    transform: translateX(-50px);
+}
+
+ul li:hover::before{
+    background: rgb(238, 60, 60);
+    
+}
+
+ul li:hover::after{
+    background: rgb(255, 52, 52);
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #2e3133;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.9s;
+}
+
+ul li::after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 
+    40px;
+    background: #2e3133;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.9s;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.9s;
+}
+ul li:hover a{
+    color: #ffff;
+}
+
+ul li:last-child::after{
+    box-shadow: -100px 100px 20px rgb(31, 30, 30);
+   
+}
